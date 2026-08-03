@@ -1,0 +1,17 @@
+{
+  "name": "@cars24/monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cars24 SDUI monorepo — reusable server-driven UI foundation (Expo mobile app + sdui-core renderer engine).",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace @cars24/mobile",
+    "android": "npm run android --workspace @cars24/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "license": "UNLICENSED"
+}

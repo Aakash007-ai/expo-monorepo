@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Expo / React Native
+.expo/
+dist/
+web-build/
+
+# Builds
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Windows
+*.orig.*
