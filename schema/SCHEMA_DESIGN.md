@@ -109,13 +109,15 @@ Actions are `{ type, ... }`. The dispatcher is generic — it routes by type, wr
 | `TOGGLE_WISHLIST` | `{type, itemId}` | Toggle `itemId` in the `wishlist` store key. |
 | `NAVIGATE` | `{type, route, params?}` | Navigate to a named route (expo-router). |
 | `OPEN_URL` | `{type, url}` | Open an external URL (Linking). |
+| `OPEN_BOTTOM_SHEET` | `{type, target}` | Open bottom sheet identified by `target` from `state.bottomSheets`. |
+| `CLOSE_BOTTOM_SHEET` | `{type}` | Close any open bottom sheet. |
 | `NOOP` | `{type}` | Explicit no-op (for non-interactive elements). |
 
 Unknown action types are logged and ignored — never crash.
 
 ### The flagship interaction (category chips)
 
-Per [ADR-0002](../docs/adr/0002-interactions-chips.md) and [ADR-0003](../docs/adr/0003-action-state-contract.md):
+Per [ADR-0006](../docs/adr/0006-supersede-interactions-tenure-emi.md) (superseding ADR-0002) and [ADR-0003](../docs/adr/0003-action-state-contract.md):
 
 ```json
 {

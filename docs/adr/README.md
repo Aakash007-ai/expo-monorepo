@@ -16,7 +16,8 @@ change is a new ADR that supersedes it.
 | ADR | Title | Status |
 |---|---|---|
 | 0001 | Build scope: home page per the component list | Accepted |
-| 0002 | Interactions: category chips are the flagship SDUI flow | Accepted |
+| 0002 | Interactions: category chips are the flagship SDUI flow | Superseded by ADR-0006 |
 | 0003 | Action/state contract: server-push values into a page state store | Accepted |
 | 0004 | Platform toolchain: Expo (managed workflow) | Accepted |
 | 0005 | Payload delivery: real local HTTP server | Accepted |
+| 0006 | Supersede ADR-0002: Restore tenure/EMI + bottom sheet | Accepted |

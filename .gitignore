@@ -27,3 +27,9 @@ Thumbs.db
 
 # Windows
 *.orig.*
+
+# manual ignored 
+.claude
+CARS24
+node_modules
+CARS24_MOBILE_ENGINEER_SDUI_ASSIGNMENT.pdf
