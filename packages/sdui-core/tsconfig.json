@@ -4,13 +4,14 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "isolatedModules": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["jest", "react-native"]
   },
   "include": ["src"]
 }

@@ -1,19 +1,73 @@
 /**
- * @cars24/sdui-core
+ * @cars24/sdui-core — generic Server-Driven UI engine.
  *
- * Generic Server-Driven UI engine. Consumed by any app; holds zero
- * screen-specific logic. The renderer walks a JSON page payload and mounts
- * registered components, routing all interactivity through a single action
- * dispatcher and falling back gracefully on unknown component types.
- *
- * Engine surface (built out in the SDUI build phase):
- *   - Schema types        (page, section, props, action, state)
- *   - SDUI parser          (validate + normalize a payload)
- *   - ComponentRegistry    (type string -> React component)
- *   - ActionDispatcher     (SET_STATE / NAVIGATE / OPEN_URL / TOGGLE_WISHLIST)
- *   - StateStore           (page-level reactive store, initialized from JSON)
- *   - FallbackComponent    (never crash on unknown types)
- *   - SDUIProvider / useSDUI (renderer root + context)
+ * This package owns the JSON tree-walker, component registry, action
+ * dispatcher, reactive state store, fallback, and React provider. It must
+ * remain domain-agnostic — no Cars24, no landing-page, no screen-specific
+ * imports anywhere in this file or its neighbors.
  */
 
-export const SDUI_CORE_VERSION = '0.1.0';
+// Engine version + schema version
+export { SDUI_CORE_VERSION } from './types';
+export type {
+  SDUIPage,
+  SDUINode,
+  SDUIAction,
+  SDUIState,
+  SDUIVisibleIf,
+  SDUIComponentInjectedProps,
+  SDUIContextValue,
+  SDUIComponent,
+  ActionHandlerOptions,
+  SDUIProps,
+} from './types';
+
+// Reactive state store
+export {
+  createStateStore,
+  type StateStore,
+  type Listener,
+} from './StateStore';
+
+// Component registry
+export {
+  registerComponent,
+  getComponent,
+  hasComponent,
+  resetComponentRegistry,
+  listRegisteredTypes,
+} from './ComponentRegistry';
+
+// Action dispatcher
+export {
+  createActionDispatcher,
+  compareVersions,
+  type ActionDispatcher,
+  type ActionDispatcherOptions,
+} from './ActionDispatcher';
+
+// Fallback for unknown types
+export {
+  FallbackComponent,
+  type FallbackMode,
+  type FallbackComponentProps,
+} from './FallbackComponent';
+
+// Parser / validator
+export {
+  parsePage,
+  validatePage,
+  evaluateVisibleIf,
+  type ParseResult,
+} from './parser';
+
+// React integration
+export {
+  SDUIProvider,
+  useSDUI,
+  useSDUIState,
+  type SDUIProviderProps,
+} from './context';
+
+// Recursive renderer
+export { SDUIRenderer, type SDUIRendererProps } from './SDUIRenderer';

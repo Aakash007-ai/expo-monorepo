@@ -7,10 +7,10 @@
 
 ## Badge
 
-**Phase:** 1 of 12 (Schema Design complete, Engine not started)  
-**Build Health:** ⚠️ App won't run — entry files deleted, no screens  
+**Phase:** 2 of 12 (Core SDUI engine complete; landing-page components next)  
+**Build Health:** 🟡 Engine builds, host app not wired yet  
 **Last Updated:** 2026-08-05  
-**Commit:** `440ed66` (scaffold + docs)
+**Commit:** see `git log --oneline -5`
 
 ---
 
